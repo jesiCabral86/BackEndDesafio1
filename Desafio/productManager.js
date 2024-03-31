@@ -1,6 +1,7 @@
 //creamos el constructor con el array vacio.
 let products = [];
 
+//creamos metodo addProducts para agregar productos al arreglo inicial
 const addProducts = (title, description, price, thumbail, code, stock) => {
 
 const newProducts = () => {
@@ -13,6 +14,7 @@ const newProducts = () => {
     stock
 }
 
+//validamos que no se repita el campo code
 const productExists = products.find (product => product.code === code);
 if (productExists){
     console.log('El producto con el codigo ${code} ya existe');
@@ -35,7 +37,7 @@ const getProductsById = (id) => {
     }
 }
 
-//test
+//hacemos el test del ingreso de los productos
  addProducts("Producto 1", "El primer producto", 299, "http://www.google.com", "ASDF121", 10);
  addProducts("Producto 2", "El segundo producto", 899, "http://www.google.com", "ASDF122", 10);
  addProducts("Producto 3", "El tercer producto", 899, "http://www.google.com", "ASDF122", 10);
